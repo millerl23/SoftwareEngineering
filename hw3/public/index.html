@@ -1,0 +1,103 @@
+<!-- 
+	Author: Lukas Miller
+	Last Updated: 2/2/2023
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Factory of Cheesecakes</title>
+<link rel="stylesheet" href="stylesheets/CheeseStyle.css">
+</head>
+<body>
+
+<!-- Page header, description, and example cheesecake image -->
+<h1>Cheesy Cheescakes</h1>
+<p>Follow the prompts to build your dream cheesecake.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" 
+	alt="Example Cheesecake" 
+	width="360" 
+	height="250">
+
+
+<!-- This acts as a break, as it is a hidden line until form submission-->
+<p id="successText" style="display:none">Thank you! Your order has been placed:</p>
+
+<!-- Begin order form -->
+<form id="form">
+  <!-- Order specification labels -->
+  <p id="varLabels">Quantity	Topping</p>
+  <!-- First radio option -->
+  <input type="radio" id="plain" name="cake_type" value="Plain" style="margin-left:70px" >
+  <label for="plain" id= "plainText">Plain</label><br>
+  <!-- Number selection -->
+  <select id="number" name="number">
+  	 <option value="1">1</option>
+ 	 <option value="2">2</option>
+ 	 <option value="3">3</option>
+ 	 <option value="4">4</option>
+  </select>
+  <!-- Second and third radio option -->
+  <input type="radio" id="cherry" name="cake_type" value="Cherry" style="margin-left:35px" >
+  <label for="cherry" id="cherryText">Cherry</label><br>
+  <input type="radio" id="chocolate" name="cake_type" value="Chocolate" style="margin-left:70px" >
+  <label for="chocolate" id="chocolateText">Chocolate</label>
+  <br>
+  
+  <!-- Text area for cheesecake notes -->
+  <!-- I had the next line spread through multiple lines. Placeholder text would only show
+  		if I put it all on one line.-->
+  <textarea name="notes" id="notes" rows="7" cols="50" placeholder="Enter any special instruction here"></textarea>
+  <br>
+  <!-- Submit button-->
+  <input type="submit" id="submit" value="Order">
+  
+</form>
+
+<!-- Consulted this link for help for setting button text: 
+	https://stackoverflow.com/questions/55832746/how-to-set-dropdown-button-text-based-on-selected-option -->
+<!-- Helper function for setting inner text of drop down button -->
+<script src="javascripts/changeText.js"></script>
+
+
+<!-- Header to select month to view orders for -->
+<h3 id="orders">Orders For 
+   <div class="dropdown">
+  	  <button class="dropbtn" id="ddbutton">Jan</button>
+      <div class="dropdown-content">
+	 	 <a value"Jan" onClick="changeText(this.innerText)">Jan</a>
+		 <a value"Feb" onClick="changeText(this.innerText)">Feb</a>
+		 <a value"Mar" onClick="changeText(this.innerText)">Mar</a>
+		 <a value"Apr" onClick="changeText(this.innerText)">Apr</a>
+		 <a value"May" onClick="changeText(this.innerText)">May</a>
+		 <a value"Jun" onClick="changeText(this.innerText)">Jun</a>
+		 <a value"Jul" onClick="changeText(this.innerText)">Jul</a>
+		 <a value"Aug" onClick="changeText(this.innerText)">Aug</a>
+		 <a value"Sep" onClick="changeText(this.innerText)">Sep</a>
+		 <a value"Oct" onClick="changeText(this.innerText)">Oct</a>
+		 <a value"Nov" onClick="changeText(this.innerText)">Nov</a>
+		 <a value"Dec" onClick="changeText(this.innerText)">Dec</a>
+	  </div>
+   </div>
+</h3>
+<ul>
+	<li>11 Cherry</li>
+	<li>17 Chocolate</li>
+	<li>31 Plain</li>
+</ul>
+
+
+<script src="javascripts/orderResponse.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

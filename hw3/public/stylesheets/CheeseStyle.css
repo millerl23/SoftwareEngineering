@@ -1,0 +1,67 @@
+/*
+	Author: Lukas Miller
+	Last Updated: 2/2/2023
+*/
+
+body {
+	background-color: skyblue;
+}
+
+h1 {
+	color: maroon;
+	margin-left: 20px;
+	font-family: "Helvetica";
+}
+
+h3 {
+	background-color: rgba(255, 192, 203, 0.6) ;
+	color: darkred;
+	margin-left: 10px;
+	font: "Times New Roman";
+	font-family: "Papyrus", monospace;
+}
+
+p{
+	font-family: "Papyrus", monospace;
+	
+}
+
+/* Consulted this for hover drop down help
+	https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover */
+.dropbtn {
+  background-color: rgba(255, 192, 203, 0.0);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: auto;
+  max-height: 150px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
