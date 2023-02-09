@@ -1,4 +1,7 @@
-	// This script to handle displaying order details
+// Lukas Miller	
+// This script to handle displaying order details,
+// or according error message
+
 let success = document.getElementById("successText");
 let form = document.getElementsByTagName("form")[0];
 	//Listener to, on form subimt, display order results or an error message
