@@ -56,8 +56,10 @@
 
 <!-- Consulted this link for help for setting button text: 
 	https://stackoverflow.com/questions/55832746/how-to-set-dropdown-button-text-based-on-selected-option -->
-<!-- Helper function for setting inner text of drop down button -->
-<script src="javascripts/changeText.js"></script>
+
+<!-- Helper function for setting inner text of drop down button,
+	 as well as issuing a post for the corresponding month-->
+<script src="javascripts/changeMonth.js"></script>
 
 
 <!-- Header to select month to view orders for -->
@@ -65,26 +67,27 @@
    <div class="dropdown">
   	  <button class="dropbtn" id="ddbutton">Jan</button>
       <div class="dropdown-content">
-	 	 <a value"Jan" onClick="changeText(this.innerText)">Jan</a>
-		 <a value"Feb" onClick="changeText(this.innerText)">Feb</a>
-		 <a value"Mar" onClick="changeText(this.innerText)">Mar</a>
-		 <a value"Apr" onClick="changeText(this.innerText)">Apr</a>
-		 <a value"May" onClick="changeText(this.innerText)">May</a>
-		 <a value"Jun" onClick="changeText(this.innerText)">Jun</a>
-		 <a value"Jul" onClick="changeText(this.innerText)">Jul</a>
-		 <a value"Aug" onClick="changeText(this.innerText)">Aug</a>
-		 <a value"Sep" onClick="changeText(this.innerText)">Sep</a>
-		 <a value"Oct" onClick="changeText(this.innerText)">Oct</a>
-		 <a value"Nov" onClick="changeText(this.innerText)">Nov</a>
-		 <a value"Dec" onClick="changeText(this.innerText)">Dec</a>
+	 	 <a value"Jan" onClick="changeMonth(this.innerText)">Jan</a>
+		 <a value"Feb" onClick="changeMonth(this.innerText)">Feb</a>
+		 <a value"Mar" onClick="changeMonth(this.innerText)">Mar</a>
+		 <a value"Apr" onClick="changeMonth(this.innerText)">Apr</a>
+		 <a value"May" onClick="changeMonth(this.innerText)">May</a>
+		 <a value"Jun" onClick="changeMonth(this.innerText)">Jun</a>
+		 <a value"Jul" onClick="changeMonth(this.innerText)">Jul</a>
+		 <a value"Aug" onClick="changeMonth(this.innerText)">Aug</a>
+		 <a value"Sep" onClick="changeMonth(this.innerText)">Sep</a>
+		 <a value"Oct" onClick="changeMonth(this.innerText)">Oct</a>
+		 <a value"Nov" onClick="changeMonth(this.innerText)">Nov</a>
+		 <a value"Dec" onClick="changeMonth(this.innerText)">Dec</a>
 	  </div>
    </div>
 </h3>
+
 <!-- Example past orders-->
 <ul>
-	<li>11 Cherry</li>
-	<li>17 Chocolate</li>
-	<li>31 Plain</li>
+	<li id="cherryOrders">11 Cherry</li>
+	<li id="chocolateOrders">17 Chocolate</li>
+	<li id="plainOrders">31 Plain</li>
 </ul>
 
 <!-- Invoke helper function for displaying order respons, or error message -->
